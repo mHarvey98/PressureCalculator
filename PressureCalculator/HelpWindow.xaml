@@ -1,0 +1,120 @@
+﻿<Window x:Class="PressureCalculator.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PressureCalculator"
+        mc:Ignorable="d"
+        Title="Help Window" Height="300" Width="500"
+        Background="LightYellow"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="Label_HelpWindow_Title"
+               Grid.Row="0"
+               Content="Help Window -- Abbreviation Descriptions" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Sitka Banner"/>
+
+        <Button x:Name="Button_HelpWindow_Close" Grid.Row="2" Width="100" Height="30" Click="Button_HelpWindow_Close_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="10" Background="LightGray" BorderBrush="Black" BorderThickness="1,1,1,1">
+                        <TextBlock Text="Close" Foreground="Black" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            Margin="0,7,0,0"
+                            Padding="0,5,0,0"
+                            Height="40"
+                            FontSize="16"></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Grid
+            Grid.Row="1"
+            ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            
+            <Label x:Name="Label_Abbreviation_Atm" Content="ATM" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+            <Label x:Name="Label_Abbreviation_Bar" Content="Bar" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+            <Label x:Name="Label_Abbreviation_KgCm2" Content="Kg/cm2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+            <Label x:Name="Label_Abbreviation_Pa" Content="Pa" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+            <Label x:Name="Label_Abbreviation_Psi" Content="PSI" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+            <Label x:Name="Label_Abbreviation_mmHg" Content="mmHg" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Sitka Banner" FontSize="16" FontWeight="Bold"/>
+
+            <TextBlock x:Name="TextBlock_Atm"
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="The Atm. unit stands for Atmospheres, and is roughly equivalent to the mean sea-level atmospheric pressure on Earth, around 14.7 psi. " >
+            </TextBlock>
+            
+            <TextBlock x:Name="TextBlock_Bar"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="The Bar is a little used unit, only appearing occasionally in meteorology. It is defined as exactly equal to 100,000 Pa., or .9869 Atm. ">
+            </TextBlock>
+            
+            <TextBlock x:Name="TextBlock_KgCm2"
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="This is the metric equivalent of pounds per square inch (p.s.i.). 1 kg/cm2 equals 98,066.5 pascals, or 14.2233 p.s.i.">
+            </TextBlock>
+
+            <TextBlock x:Name="TextBlock_Pa"
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="0"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="The pascal is the SI derived unit of pressure used to quantify internal pressure, stress, and ultimate tensile strength. 1 Atmosphere equals .00000986 Pa.">
+            </TextBlock>
+
+            <TextBlock x:Name="TextBlock_Psi"
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="0"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="It is the pressure resulting from a force of one pound-force applied to an area of one square inch.">
+            </TextBlock>
+            
+            <TextBlock x:Name="TextBlock_mmHg"
+                Grid.Row="5"
+                Grid.Column="1"
+                Margin="0"
+                Padding="5,0,0,1"
+                TextWrapping="Wrap"
+                FontSize="10"
+                Text="Sometimes referred to as 'Torr', the millimeter of mercury is still routinely used in medicine, meteorology, aviation, and many other scientific fields. 1 mmHg = 133.3224 Pa.">
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>
